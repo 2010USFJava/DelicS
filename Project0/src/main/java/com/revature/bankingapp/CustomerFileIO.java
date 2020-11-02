@@ -1,6 +1,6 @@
 package com.revature.bankingapp;
 import java.io.*;
-import java.util.List;
+import java.util.*;
 
 
 public class CustomerFileIO {
@@ -19,18 +19,23 @@ public class CustomerFileIO {
 				e.printStackTrace();
 			}
 		}
-	//read method
-		//@SuppressWarnings("unchecked")
-			public static void readCustomerFile() {
-				try {
-					
-					ObjectInputStream objectIn= new ObjectInputStream(new FileInputStream(CustomerFile));
-					CustomerList.customerList= (ArrayList<Cusotmer>)objectIn.readObject();
-					
-				}catch (FileNotFoundException e) {
-					e.printStackTrace();
-				}catch (IOException e){
-					e.printStackTrace();
-				}
-			}
+	    //read method
+	    
+	    @SuppressWarnings("unchecked")
+	    public static void readCustomerFile() {
+	        try {
+	            @SuppressWarnings("resource")
+				ObjectInputStream objectIn = new ObjectInputStream(new FileInputStream(CustomerFile));
+	            CustomerList.customerList = (ArrayList<Customer>)objectIn.readObject();
+	        } catch (FileNotFoundException e) {
+	            // TODO Auto-generated catch block
+	            e.printStackTrace();
+	        } catch (IOException e) {
+	            // TODO Auto-generated catch block
+	            e.printStackTrace();
+	        } catch (ClassNotFoundException e) {
+	            // TODO Auto-generated catch block
+	            e.printStackTrace();
+	        }
+	    }
 }

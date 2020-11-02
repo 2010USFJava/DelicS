@@ -8,6 +8,7 @@ public class Menu {
 	static Account myAccount = new Account();
 
 	public static void startMenu() {
+		@SuppressWarnings("resource")
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Register a Username");
 		String username =scanner.next();
@@ -15,18 +16,15 @@ public class Menu {
 		String password = scanner.next();
 		Customer a = new Customer(username, password);
 		LogThis.LogIt("info", a.getUsername() + "was created!");
-		myAccount.loginScreen();
-		/*System.out.println("Type your password again to guarantee a match");
+		System.out.println("Type your password again to guarantee a match");
 		String password2 = scanner.next();
 		
-			if (password != password2) {
+			if (password.equals(password2)) {
+			 myAccount.loginScreen();
+			}else {
 			System.out.println("The passwords do not match, try again");
 			startMenu();
-			}else {
-				Customer a = new Customer(username, password);
-				LogThis.LogIt("info", a.getUsername() + "was created!");
-				myAccount.loginScreen();
-				}*/
+				}
 	}
 	public static void createAccount() {	
 		/*Scanner scanner = new Scanner(System.in);

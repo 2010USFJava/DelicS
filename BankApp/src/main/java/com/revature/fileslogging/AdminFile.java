@@ -1,4 +1,4 @@
-package com.revature.bank;
+package com.revature.fileslogging;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -9,16 +9,18 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CustomerFile {
+import com.revature.users.Admin;
+import com.revature.users.Employee;
 
-    public static final String CsFile = "csFile.txt";
+public class AdminFile {
+public static final String AdminFile = "adminList.txt";
     
     //write method
     
-    public static void writeCustomerFile(List<Customer> cList) {
+    public static void writeAdminFile(List<Admin> aList) {
         try {
-            ObjectOutputStream objectOut = new ObjectOutputStream(new FileOutputStream(CsFile));
-            objectOut.writeObject(cList);
+            ObjectOutputStream objectOut = new ObjectOutputStream(new FileOutputStream(AdminFile));
+            objectOut.writeObject(aList);
             objectOut.close();
         } catch (FileNotFoundException e) {
             // TODO Auto-generated catch block
@@ -33,11 +35,11 @@ public class CustomerFile {
     
  
     @SuppressWarnings("unchecked")
-	public static void readCustomerFile() {
+	public static void readAdminFile() {
         try {
             
-			ObjectInputStream objectIn = new ObjectInputStream(new FileInputStream(CsFile));
-            Roster.customerList = (ArrayList<Customer>)objectIn.readObject();
+			ObjectInputStream objectIn = new ObjectInputStream(new FileInputStream(AdminFile));
+            Roster.adminList = (ArrayList<Admin>)objectIn.readObject();
         } catch (FileNotFoundException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();

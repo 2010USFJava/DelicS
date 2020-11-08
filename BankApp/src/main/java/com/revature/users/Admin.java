@@ -1,8 +1,18 @@
 package com.revature.users;
 
-import com.revature.fileslogging.Roster;
+import java.io.Serializable;
 
-public class Admin {
+import com.revature.fileslogging.AdminFile;
+import com.revature.fileslogging.LogThis;
+import com.revature.fileslogging.Roster;
+import com.revature.fileslogging.UserFile;
+
+public class Admin implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -5513646448797799832L;
+
 	private String username;
 	private String password;
 
@@ -14,7 +24,8 @@ public class Admin {
 		this.username = username;
 		this.password = password;
 		Roster.adminList.add(this);
-		
+		AdminFile.writeAdminFile(Roster.adminList);
+		LogThis.LogIt("info", "A new admin has been created, ");
 	}
 	public String getUsername() {
 		return username;
@@ -30,7 +41,7 @@ public class Admin {
 	}
 	@Override
 	public String toString() {
-		return "Employee [username=" + username + ", password=" + password + "]";
+		return "Admin [username=" + username + ", password=" + password + "]";
 	}
 
 

@@ -4,10 +4,10 @@ import com.revature.fileslogging.*;
 
 public class Driver {
 	public static void main(String[] args) {
-	//UserFile.readUserFile();
+	UserFile.readEmployeeFile();
+	AdminFile.readAdminFile();
 	CustomerFile.readCustomerFile();
 	Menu.startMenu();
-	//System.out.println(Roster.customerList.toString());
 	
 	}
 }

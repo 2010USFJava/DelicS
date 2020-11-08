@@ -13,62 +13,67 @@ public class Customer implements Serializable{
 	private static final long serialVersionUID = 3718081231509928326L;
 		private String username;
 		private String password;
-		private String accountName;
-		//private int accountID = 0;
-		private int balance;
-		static final AtomicLong NEXT_ID = new AtomicLong(0);
-		final long id = NEXT_ID.getAndIncrement();
+		private String username2;
+		private String password2;
+		private int accountNumber;
+		private double balance;
+		//static final AtomicLong NEXT_ID = new AtomicLong(0);
+		//final long id = NEXT_ID.getAndIncrement();
 		boolean accountOn;
 		
 		public Customer() {
 			super();
-			Roster.customerList.add(this);//because we are referring to the objects that is being created at that time
+			//Roster.customerList.add(this);//because we are referring to the objects that is being created at that time
 			//if we didn't write the array list there is a possibility that we could lose the info
-			CustomerFile.writeCustomerFile(Roster.customerList);
+			//CustomerFile.writeCustomerFile(Roster.customerList);
 			//it will save to the array list and write to a file in the constructor.
 		}
-		public Customer(String accountName) {
-			this.accountName= accountName;
-			Roster.customerList.add(this);
-			CustomerFile.writeCustomerFile(Roster.customerList);
-			LogThis.LogIt("info", "The account name has been updated, "+ this.getId() );
-		}
-		public Customer(String nameForAccount, int balance) {
-			this.accountName= nameForAccount;
-			this.balance = balance;
-			Roster.customerList.add(this);
-			CustomerFile.writeCustomerFile(Roster.customerList);
-			LogThis.LogIt("info", "A new account has been created, "+ this.getId() );
-	
-		}
-		public Customer(boolean accountOn) {
-			this.accountOn = accountOn;
-			Roster.customerList.add(this);
-			CustomerFile.writeCustomerFile(Roster.customerList);
-			LogThis.LogIt("info", "Account is turned on." );
-		}
-		public Customer(String username, String password) {
+		public Customer(String username, String password, String username2, String password2, boolean accountOn, int accountNumber, double balance) {
 			this.username = username;
 			this.password = password;
+			this.username2 = username2;
+			this.password2 = password2;
+			this.accountOn = accountOn;
+			this.accountNumber = accountNumber;
+			this.balance = balance;
 			Roster.customerList.add(this);
 			CustomerFile.writeCustomerFile(Roster.customerList);
-			LogThis.LogIt("info", "A new account has been created, "+ this.getId() );
+			LogThis.LogIt("info", "A new account has been created, "+ this.getAccountNumber() );
+			
 		}
 		
-		public long getId() {
+		public String getUsername() {
+			return username;
+		}
+		public void setUsername(String username) {
+			this.username = username;
+		}
+		public String getPassword() {
+			return password;
+		}
+		public void setPassword(String password) {
+			this.password = password;
+		}
+		/*public long getId() { 
 	         return id;
-	    }
-		public int getBalance() {
+	    }*/
+		public double getBalance() {
 			return balance;
 		}
-		public void setBalance(int balance) {
-			this.balance = balance;
+		public void setBalance(double acc2) {
+			this.balance = acc2;
 		}
-		public String getAccountName() {
-			return accountName;
+		public String getUsername2() {
+			return username2;
 		}
-		public void setAccountName(String accountName) {
-			this.accountName = accountName;
+		public void setUsername2(String username2) {
+			this.username2 = username2;
+		}
+		public String getPassword2() {
+			return password2;
+		}
+		public void setPassword2(String password2) {
+			this.password2 = password2;
 		}
 		public boolean getAccountOn() {
 			return accountOn;
@@ -76,12 +81,17 @@ public class Customer implements Serializable{
 		public void setAccountOn(boolean accountOn) {
 			this.accountOn = accountOn;
 		}
+		public int getAccountNumber() {
+			return accountNumber;
+		}
+		public void setAccountNumber(int accountNumber) {
+			this.accountNumber = accountNumber;
+		}
 		@Override
 		public String toString() {
-			return "Customer [accountName=" + accountName + ", balance=" + balance + ", id=" + id + ", accountOn="
-					+ accountOn + "]";
+			return "Customer [username=" + username + ", password=" + password + ", username2=" + username2
+					+ ", password2=" + password2 + ", accountNumber=" + accountNumber + ", balance=" + balance
+					+ ", accountOn=" + accountOn + "]";
 		}
-
-		
 		
 }

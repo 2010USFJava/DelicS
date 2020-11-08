@@ -1,8 +1,17 @@
 package com.revature.users;
 
-import com.revature.fileslogging.Roster;
+import java.io.Serializable;
 
-public class Employee {
+import com.revature.fileslogging.LogThis;
+import com.revature.fileslogging.Roster;
+import com.revature.fileslogging.UserFile;
+
+public class Employee implements Serializable{
+/**
+ * 
+ */
+private static final long serialVersionUID = -9019522254561627764L;
+
 private String username;
 private String password;
 
@@ -14,7 +23,8 @@ public Employee(String username, String password) {
 	this.username = username;
 	this.password = password;
 	Roster.employeeList.add(this);
-	
+	UserFile.writeEmployeeFile(Roster.employeeList);
+	LogThis.LogIt("info", "A new employee has been created, ");
 }
 public String getUsername() {
 	return username;

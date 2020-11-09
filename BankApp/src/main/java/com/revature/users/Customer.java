@@ -89,9 +89,9 @@ public class Customer implements Serializable{
 		}
 		@Override
 		public String toString() {
-			return "Customer [username=" + username + ", password=" + password + ", username2=" + username2
-					+ ", password2=" + password2 + ", accountNumber=" + accountNumber + ", balance=" + balance
-					+ ", accountOn=" + accountOn + "]";
+			return "Customer [username= " + username + ", password= " + password + ", username2= " + username2
+					+ ", password2= " + password2 + ", accountNumber= " + accountNumber + ", balance= " + balance
+					+ ", accountOn= " + accountOn + "]";
 		}
 		
 }

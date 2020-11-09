@@ -28,15 +28,16 @@ static Customer c = new Customer();
 					String password = scanner.next();
 					System.out.println("Register an account number \n");
 					int accNumber = scanner.nextInt();
-					for(int i = 0; i < Roster.customerList.size(); i++) {
-						int number= Roster.customerList.get(i).getAccountNumber();
-							if(accNumber == number){
-								Customer c = new Customer(username, password, null, null, true, accNumber, 0);
-								loginPortal();
-							}else {
-								System.out.println("Account number already exists. Try to register again.");
-								startMenu();
-							}
+					for (int i = 0; i< Roster.customerList.size(); i++) {
+						int number = Roster.customerList.get(i).getAccountNumber();
+					if (accNumber == number) {
+						System.out.println("Account number already exists. Try to register again.");
+						startMenu();
+					}else {
+						Customer c = new Customer(username, password, null, null, true, accNumber, 0);
+						System.out.println("Your username and password have been stored. Login is below.");
+						loginPortal();
+					}
 					}
 					break;
 				case 2:
@@ -46,7 +47,7 @@ static Customer c = new Customer();
 					System.out.println("Register a password \n");
 					String passwordE = scanner.next();
 					Employee e = new Employee(usernameE, passwordE);
-					System.out.println("Your username and passwrod have been stored. Login is below.");
+					System.out.println("Your username and password have been stored. Login is below.");
 					loginPortal();
 					break;
 				case 3:
@@ -56,7 +57,7 @@ static Customer c = new Customer();
 					System.out.println("Register a password \n");
 					String passwordA = scanner.next();
 					Admin a = new Admin(usernameA, passwordA);
-					System.out.println("Your username and passwrod have been stored. Login is below.");
+					System.out.println("Your username and password have been stored. Login is below.");
 					loginPortal();
 				case 4:
 					loginPortal();
@@ -244,8 +245,7 @@ static Customer c = new Customer();
 			System.out.println("Enter your account number. \n");
 			int userAccountNumber1 = scanner.nextInt();
 			System.out.println("Enter the ammount you would like to add to your account. \n");
-			Customer c1 = Roster.findCustomerByAccount(userAccountNumber1);
-			
+			Customer c1 = Roster.findCustomerByAccount(userAccountNumber1);	
 			double userAmount = scanner.nextInt();
 			Account.deposit(userAmount, c1);
 			optionsC();
@@ -273,6 +273,7 @@ static Customer c = new Customer();
 			}else {
 				System.out.println("Invalid procedure");
 			}
+			optionsC();
 			break;
 		case 6:
 			loginPortal();

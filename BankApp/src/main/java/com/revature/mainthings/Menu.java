@@ -6,64 +6,83 @@ import com.revature.users.*;
 
 public class Menu{
 static Scanner scanner = new Scanner(System.in);	
+
 static Customer c = new Customer();
 	public static void startMenu(){
-		System.out.println("[1] Customer Register" +
-					"\n[2] Employee Register" +
-					"\n[3] Admin Register" +
-					"\n===================================================" +
-					'\n' + "[4] Login \n");
-			int userChoice = scanner.nextInt();
-			switch (userChoice) {
-			case 1:
-				System.out.println("CUSTOMER \n");
-				System.out.println("Register a username. \n");
-				String username = scanner.next();
-				System.out.println("Register a password \n");
-				String password = scanner.next();
-				System.out.println("Register an account number \n");
-				int accNumber = scanner.nextInt();
-				for(int i = 0; i < Roster.customerList.size(); i++) {
-					int number= Roster.customerList.get(i).getAccountNumber();
-						if(accNumber == number){
-							Customer c = new Customer(username, password, null, null, true, accNumber, 0);
-							loginPortal();
-						}else {
-							System.out.println("Account number already exists. Try to register again.");
-							startMenu();
-						}
-				}
-				break;
-			case 2:
-				System.out.println("EMPLOYEE \n");
-				System.out.println("Register a username. \n");
-				String usernameE = scanner.next();
-				System.out.println("Register a password \n");
-				String passwordE = scanner.next();
-				Employee e = new Employee(usernameE, passwordE);
-				System.out.println("Your username and passwrod have been stored. Login is below.");
-				loginPortal();
-				break;
-			case 3:
-				System.out.println("ADMIN \n");
-				System.out.println("Register a username. \n");
-				String usernameA = scanner.next();
-				System.out.println("Register a password \n");
-				String passwordA = scanner.next();
-				Admin a = new Admin(usernameA, passwordA);
-				System.out.println("Your username and passwrod have been stored. Login is below.");
-				loginPortal();
-			case 4:
-				loginPortal();
-				break;
-			default:
-				System.out.println(" \n Not an option.");
-				startMenu();
-				break;
-			}		
+			boolean continueInput = true;
+		do {
+	       
+	    	try {
+	        	 System.out.println("[1] Customer Register" +
+						"\n[2] Employee Register" +
+						"\n[3] Admin Register" +
+						"\n===================================================" +
+						'\n' + "[4] Login \n");
+				int userChoice = scanner.nextInt();
+				switch (userChoice) {
+				case 1:
+					System.out.println("CUSTOMER \n");
+					System.out.println("Register a username. \n");
+					String username = scanner.next();
+					System.out.println("Register a password \n");
+					String password = scanner.next();
+					System.out.println("Register an account number \n");
+					int accNumber = scanner.nextInt();
+					for(int i = 0; i < Roster.customerList.size(); i++) {
+						int number= Roster.customerList.get(i).getAccountNumber();
+							if(accNumber == number){
+								Customer c = new Customer(username, password, null, null, true, accNumber, 0);
+								loginPortal();
+							}else {
+								System.out.println("Account number already exists. Try to register again.");
+								startMenu();
+							}
+					}
+					break;
+				case 2:
+					System.out.println("EMPLOYEE \n");
+					System.out.println("Register a username. \n");
+					String usernameE = scanner.next();
+					System.out.println("Register a password \n");
+					String passwordE = scanner.next();
+					Employee e = new Employee(usernameE, passwordE);
+					System.out.println("Your username and passwrod have been stored. Login is below.");
+					loginPortal();
+					break;
+				case 3:
+					System.out.println("ADMIN \n");
+					System.out.println("Register a username. \n");
+					String usernameA = scanner.next();
+					System.out.println("Register a password \n");
+					String passwordA = scanner.next();
+					Admin a = new Admin(usernameA, passwordA);
+					System.out.println("Your username and passwrod have been stored. Login is below.");
+					loginPortal();
+				case 4:
+					loginPortal();
+					break;
+				default:
+					System.out.println(" \n Not an option.");
+					startMenu();
+					break;
+				}	
+				continueInput = false;
+	        }
+	        catch (java.util.InputMismatchException e) {
+	            e.printStackTrace();
+	            scanner.nextLine();
+	        }
+
+	}
+		while(continueInput);
 	}
 
+
+
 	public static void loginPortal() {
+		boolean continueInput = true;
+		do {
+			try {
 		System.out.println("Select which login portal you will use." +
 				"\n===================================================" +
 				'\n' + "[1] Customer " +
@@ -88,44 +107,68 @@ static Customer c = new Customer();
 			loginPortal();
 			break;
 		}
+		continueInput = false;
+		}catch(InputMismatchException e) {
+			e.printStackTrace();
+			scanner.nextLine();
+		}
+		}
+			while(continueInput);
+		}
+	
 		
-	}
+	
 	public static void loginPortalC() {
 		System.out.println(Roster.customerList);
-		System.out.println("Input username");
-		String input = scanner.next();
-		System.out.println("Input password");
-		String passInput = scanner.next();
-		if (Roster.findUserByUsername(input) != null) {
-			if(Roster.findUserByPassword(passInput) != null){
-				optionsC();
-			}
-			
-		}else {
-			System.out.println("Invalid username and password combo.");
-			loginPortalC();
+		System.out.println("\n Make a selection." +
+						"[1] Regular user" +
+						"[2] Joint User");
+		boolean continueInput = true;
+		do {
+		try {
+		int choice = scanner.nextInt();
+		switch (choice) {
+		case 1:
+			System.out.println("Input username");
+			String input = scanner.next();
+			System.out.println("Input password");
+			String passInput = scanner.next();
+			if (Roster.findByUandP(input, passInput) != null) {
+				//if(Roster.findUserByPassword(passInput) != null){
+					optionsC();
+				}else {
+					System.out.println("Invalid username and password combo.");
+				}
+		break;
+		case 2:
+			System.out.println("Input username");
+			String input2 = scanner.next();
+			System.out.println("Input password");
+			String passInput2 = scanner.next();
+			if (Roster.findByUandP2(input2, passInput2) != null) {
+				//if(Roster.findUserByPassword(passInput) != null){
+					optionsC();
+				}else {
+					System.out.println("Invalid username and password combo.");
+				}
+			break;
+			default:
+				System.out.println("Not an option");
+				loginPortalC();
+				break;
 		}
-		
+		continueInput = false;
 	}
-	public static void loginPortalAlt() {
-		System.out.println(Roster.customerList);
-		System.out.println("Input username");
-		String input = scanner.next();
-		System.out.println("Input password");
-		String passInput = scanner.next();
-		System.out.println("Enter the shared account number");
-		int accInput = scanner.nextInt();
-		if (Roster.findUserByUsername2(input) != null)
-			if (Roster.findUserByPassword2(passInput)!= null){
-				if(Roster.findCustomerByAccount(accInput).equals(c.getAccountNumber())){
-				optionsC();
-			}
-			
-		}else {
-			System.out.println("Invalid username, password, and account number combo.");
-			loginPortalC();
+		catch (InputMismatchException e) {
+		e.printStackTrace();
+		scanner.nextLine();
+	}
 		}
-	}	
+		while(continueInput);
+	}
+		
+
+
 
 	public static void loginPortalE() {
 		System.out.println(Roster.employeeList);
@@ -160,8 +203,13 @@ static Customer c = new Customer();
 		}
 	}
 	public static void optionsC(){
-	//for (int i = 0; i < Roster.customerList.size(); i++) {
-		if (c.getAccountOn() == true) {
+		boolean continueInput = true;
+		do {
+			try {
+	System.out.println("Enter your account number");
+	int accNo = scanner.nextInt();
+	Customer e = Roster.findCustomerByAccount(accNo);
+		if (e.getAccountOn() == true) {
 		System.out.println("Select an option from the list below." +
 				"\n [1] Apply for joint account" +
 				"\n [2] View Account Balance"+
@@ -182,7 +230,7 @@ static Customer c = new Customer();
 			d.setUsername2(username2);
 			d.setPassword2(password2);
 			System.out.println("Go to login.");
-			loginPortalAlt();
+			loginPortalC();
 			break;
 		case 2:
 			System.out.println("Enter your account number");
@@ -239,12 +287,20 @@ static Customer c = new Customer();
 			System.out.println("Your account was denied");
 			loginPortal();
 		}
+		continueInput = false;
+	}catch(InputMismatchException e) {
+		e.printStackTrace();
+		scanner.nextLine();
 	}
-
-
-		
+		}
+	while(continueInput);
 	
+}
+
 	public static void optionsE() {
+		boolean continueInput = true;
+		do {
+		try {
 		System.out.println("Choose an option." +
 							"\n [1] Approve an account" +
 							"\n [2] Deny an account" +
@@ -258,7 +314,7 @@ static Customer c = new Customer();
 			System.out.println("Select the account number you want to approve.");
 			int userChoice = scanner.nextInt();
 			Customer c5 = Roster.findCustomerByAccount(userChoice);
-			Roster.approveAccount(userChoice, c5);
+			Roster.approveAccount(userChoice);
 			System.out.println("The account is approved");
 			optionsE();
 			break;
@@ -282,9 +338,19 @@ static Customer c = new Customer();
 			System.out.println("Not an option");
 			optionsE();
 		}
+		continueInput = false;
+		}catch(InputMismatchException e) {
+			e.printStackTrace();
+			scanner.nextLine();
+		}
+			}
+		while(continueInput);
 		
 	}
 	public static void optionsA() {
+		boolean continueInput = true;
+		do {
+			try {
 		System.out.println("Choose an option." +
 				"\n [1] Approve an account" +
 				"\n [2] Deny an account" +
@@ -302,7 +368,7 @@ switch (option) {
 		System.out.println("Select the account number you want to approve.");
 		int userChoice = scanner.nextInt();
 		Customer c5 = Roster.findCustomerByAccount(userChoice);
-		Roster.approveAccount(userChoice, c5);
+		Roster.approveAccount(userChoice);
 		System.out.println("The account is approved");
 		optionsA();
 		break;
@@ -320,6 +386,8 @@ switch (option) {
 		optionsA();
 		break;
 	case 4:
+		do {
+			try {
 		System.out.println("Enter the amount you would like to send to another account. \n");
 		int userAmount3 = scanner.nextInt(); //amount
 		System.out.println("Enter the user account number that you would like to transfer from. \n");
@@ -331,32 +399,66 @@ switch (option) {
 		Account.transfer(userAmount3, c1, c2);
 		System.out.println(Roster.customerList.toString() + "\n");
 		optionsA();
+		continueInput = false;
+			}catch(InputMismatchException e) {
+				e.printStackTrace();
+				scanner.nextLine();
+			}
+				}
+			while(continueInput);
 		break;
 	case 5:
+		do {
+		try {
 		System.out.println("Enter the account number that you would like to deposit to. \n");
 		int userAccountNumber3 = scanner.nextInt();
 		System.out.println("Enter the ammount you would like to add to your account. \n");
 		Customer c3 = Roster.findCustomerByAccount(userAccountNumber3);
 		double userAmount = scanner.nextInt();
 		Account.deposit(userAmount, c3);
-		optionsC();
+		optionsA();
+		continueInput = false;
+		}catch(InputMismatchException e) {
+			e.printStackTrace();
+			scanner.nextLine();
+		}
+			}
+		while(continueInput);
 		break;
 	case 6:
+		do {
+		try {
 		System.out.println("Enter the account number you want to withdraw from. \n");
 		int userAccountNumber4 = scanner.nextInt();
 		System.out.println("Enter the amount you would like to subtract from your account. \n");
 		double userAmount4 = scanner.nextInt();
 		Customer c7 = Roster.findCustomerByAccount(userAccountNumber4);
 		Account.withdraw(userAmount4, c7);
-		optionsC();
+		optionsA();
+		continueInput = false;
+		}catch(InputMismatchException e) {
+		e.printStackTrace();
+		scanner.nextLine();
+		}
+			}
+			while(continueInput);
 		break;
 	case 7:
+		do {
+		try {
 		System.out.println("Enter the account number for the account that you wish to remove");
 		int acct = scanner.nextInt();
 		Customer c6 = Roster.findCustomerByAccount(acct);
 		Roster.removeAccount(c6);
 		CustomerFile.writeCustomerFile(Roster.customerList);
 		optionsA();
+		continueInput = false;
+		}catch(InputMismatchException e) {
+			e.printStackTrace();
+			scanner.nextLine();
+		}
+			}
+		while(continueInput);
 		break;
 	case 8:
 		loginPortal();
@@ -365,7 +467,14 @@ switch (option) {
 		System.out.println("Not an option");
 		optionsA();
 	}
-
-	}
+		continueInput = false;
+			}catch(InputMismatchException e) {
+				e.printStackTrace();
+				scanner.nextLine();
+			}
+				}
+			while(continueInput);
+			
+		}
 
 }

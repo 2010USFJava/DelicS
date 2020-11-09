@@ -61,6 +61,34 @@ public class Roster {
 		return null; 
 		}
 	
+	public static Customer findByUandP(String inputUser, String inputPass) {
+		for (int i = 0; i < customerList.size(); i++) {
+			String pass= customerList.get(i).getPassword();
+			String user= customerList.get(i).getUsername();
+			if(inputUser.equals(user) && inputPass.equals(pass)) {
+				return customerList.get(i);
+			}
+		}
+		
+		System.out.println("User not found");
+		Menu.startMenu();
+		return null; 
+		
+	}
+	public static Customer findByUandP2(String inputUser, String inputPass) {
+		for (int i = 0; i < customerList.size(); i++) {
+			String pass= customerList.get(i).getPassword2();
+			String user= customerList.get(i).getUsername2();
+			if(inputUser.equals(user) && inputPass.equals(pass)) {
+				return customerList.get(i);
+			}
+		}
+		
+		System.out.println("User not found");
+		Menu.startMenu();
+		return null; 
+		
+	}
 	public static Customer findCustomerByAccount(int inputID) {
 		for (int i = 0; i < customerList.size(); i++) {
 			int number= customerList.get(i).getAccountNumber();
@@ -90,13 +118,13 @@ public class Roster {
 		return null; 
 		
 		}
-	public static boolean approveAccount(int inputID, Customer a) { //approve account
+	public static  void approveAccount(int inputID) { //approve account
 		for (int i = 0; i < customerList.size(); i++) {
-			int id= customerList.get(i).getAccountNumber();
-			if(inputID == id) {
-				a.setAccountOn(true);
+			int number = customerList.get(i).getAccountNumber();
+			if (inputID == number){
+				customerList.get(i).setAccountOn(true);
 			}
-		}return null != null;
+		}CustomerFile.writeCustomerFile(Roster.customerList);
 	}
 	
 	public static void denyAccount(int inputID) { //deny account

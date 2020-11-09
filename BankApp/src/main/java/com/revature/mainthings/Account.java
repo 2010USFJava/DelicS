@@ -12,7 +12,7 @@ public class Account {
 			if (modBalance < 0) {
 				System.out.println("Account can not be overdrawn.");
 			}else {
-				System.out.println("Your current balance is $" + modBalance + ".");
+				System.out.println("The current balance is $" + modBalance + ".");
 				a.setBalance(modBalance);
 				CustomerFile.writeCustomerFile(Roster.customerList);
 			}
@@ -28,7 +28,7 @@ public class Account {
 			if (modBalance < 0) {
 				System.out.println("Account can not be overdrawn.");
 			}else {
-				System.out.println("Your current balance is $" + modBalance + ".");
+				System.out.println("The current balance is $" + modBalance + ".");
 				a.setBalance(modBalance);
 				CustomerFile.writeCustomerFile(Roster.customerList);
 			}
@@ -51,13 +51,13 @@ public class Account {
 					a.setBalance(modBalance);
 
 					b.setBalance(secondBalance + amount);
-					System.out.println("Your current balance is $" + modBalance);
+					System.out.println("The current balance is $" + modBalance);
 					CustomerFile.writeCustomerFile(Roster.customerList);
 				}
 		}
 }
 	public static void viewBalance(Customer a) {
 		double balance = a.getBalance();
-		System.out.println("Your current balance is $" + balance);
+		System.out.println("The current balance is $" + balance);
 	}
 }

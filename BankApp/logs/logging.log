@@ -31,3 +31,6 @@
 [ERROR] 2020-11-07 23:40:42.745 [main] LogThis - A new account has been created, 3
 [ERROR] 2020-11-07 23:44:40.902 [main] LogThis - A new admin has been created, 
 [ERROR] 2020-11-08 00:03:55.639 [main] LogThis - A new account has been created, 5
+[ERROR] 2020-11-08 14:17:57.926 [main] LogThis - A new employee has been created, 
+[ERROR] 2020-11-08 15:18:15.757 [main] LogThis - A new admin has been created, 
+[ERROR] 2020-11-08 18:59:00.907 [main] LogThis - A new employee has been created, 

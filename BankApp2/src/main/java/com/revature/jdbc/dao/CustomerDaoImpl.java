@@ -36,7 +36,7 @@ public class CustomerDaoImpl implements CustomerDao{
 			ps.setString(2,  c.getPassword());	
 			ps.setDouble(3, c.getBalance());
 			ps.executeUpdate(); 
-			LogThis.LogIt("info", "A new customer and account have been created ");
+			LogThis.LogIt("info", "A new customer and account have been created. username is: " + c.getUsername() + " password is: " + c.getPassword());
 		}
 
 		public Customer retrieveByUser(String username) throws SQLException {
@@ -76,7 +76,7 @@ public class CustomerDaoImpl implements CustomerDao{
 					ps.setDouble(1, modBalance);
 					ps.setString(2, username);
 					ps.executeUpdate();
-					LogThis.LogIt("info", " A deposit has been made "+ a.getBalance() + " for " );
+					LogThis.LogIt("info", " A deposit has been made "+ a.getBalance() + " for " + a.getUsername() );
 					return a;
 				}
 			}else {

@@ -14,8 +14,6 @@ static Customer c = new Customer();
 	       
 	    	try {
 	        	 System.out.println("[1] Customer Register" +
-						"\n[2] Employee Register" +
-						"\n[3] Admin Register" +
 						"\n===================================================" +
 						'\n' + "[4] Login \n");
 				int userChoice = scanner.nextInt();
@@ -122,8 +120,8 @@ static Customer c = new Customer();
 	public static void loginPortalC() {
 		System.out.println(Roster.customerList);
 		System.out.println("\n Make a selection." +
-						"[1] Regular user" +
-						"[2] Joint User");
+						"\n[1] Regular user" +
+						"\n[2] Joint User");
 		boolean continueInput = true;
 		do {
 		try {
@@ -172,7 +170,7 @@ static Customer c = new Customer();
 
 
 	public static void loginPortalE() {
-		System.out.println(Roster.employeeList);
+		//System.out.println(Roster.employeeList);
 		System.out.println("Input username");
 		String input = scanner.next();
 		System.out.println("Input password");
@@ -188,7 +186,7 @@ static Customer c = new Customer();
 		}
 	}
 	public static void loginPortalA() {
-		System.out.println(Roster.adminList.toString());
+		//System.out.println(Roster.adminList.toString());
 		System.out.println("Input username");
 		String input = scanner.next();
 		System.out.println("Input password");

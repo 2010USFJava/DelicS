@@ -1,0 +1,76 @@
+[ERROR] 2020-11-15 17:09:00.844 [main] LogThis - A new customer and account have been created, 11
+[ERROR] 2020-11-15 17:14:47.284 [main] LogThis - A new customer and account have been created, 11
+[ERROR] 2020-11-15 17:23:48.295 [main] LogThis - A new customer and account have been created, 11
+[ERROR] 2020-11-15 17:32:05.186 [main] LogThis - A new customer and account have been created, 11
+[ERROR] 2020-11-15 17:33:50.880 [main] LogThis - A new customer and account have been created, 11
+[ERROR] 2020-11-15 17:42:17.173 [main] LogThis - A new customer and account have been created, 11
+[ERROR] 2020-11-15 18:17:30.035 [main] LogThis - A new customer and account have been created, 11
+[ERROR] 2020-11-15 20:33:54.688 [main] LogThis - A new customer and account have been created, 11
+[ERROR] 2020-11-15 20:35:33.016 [main] LogThis - A new customer and account have been created, 11
+[ERROR] 2020-11-15 20:38:54.894 [main] LogThis - A new customer and account have been created, 11
+[ERROR] 2020-11-15 20:48:27.666 [main] LogThis - A new customer and account have been created, 11
+[ERROR] 2020-11-15 20:48:41.808 [main] LogThis - A new customer and account have been created, 11
+[ERROR] 2020-11-15 20:52:40.899 [main] LogThis - A new customer and account have been created, 22
+[ERROR] 2020-11-15 20:52:54.471 [main] LogThis - A new customer and account have been created, 22
+[ERROR] 2020-11-15 20:55:38.249 [main] LogThis - A new customer and account have been created, 11
+[ERROR] 2020-11-15 20:55:52.529 [main] LogThis - A new customer and account have been created, 11
+[ERROR] 2020-11-15 20:56:46.453 [main] LogThis - A new customer and account have been created, 11
+[ERROR] 2020-11-16 10:16:42.933 [main] LogThis - A new customer and account have been created, 22
+[ERROR] 2020-11-16 10:16:57.982 [main] LogThis - A new customer and account have been created, 11
+[ERROR] 2020-11-16 10:16:57.982 [main] LogThis - A new customer and account have been created, 22
+[ERROR] 2020-11-16 10:36:23.898 [main] LogThis - A new customer and account have been created, 11
+[ERROR] 2020-11-16 10:36:35.808 [main] LogThis - A new customer and account have been created, 11
+[ERROR] 2020-11-16 10:49:12.606 [main] LogThis - A new customer and account have been created, 11
+[ERROR] 2020-11-16 11:00:06.052 [main] LogThis - A new customer and account have been created, 11
+[ERROR] 2020-11-16 11:05:12.567 [main] LogThis - A new customer and account have been created, 11
+[ERROR] 2020-11-16 11:19:25.682 [main] LogThis - A new customer and account have been created, 11
+[ERROR] 2020-11-16 14:28:08.334 [main] LogThis - A new customer and account have been created, 11
+[ERROR] 2020-11-16 14:28:27.729 [main] LogThis - A new customer and account have been created, 11
+[ERROR] 2020-11-16 14:52:27.592 [main] LogThis - A new customer and account have been created, 11
+[ERROR] 2020-11-16 14:52:34.263 [main] LogThis - A new customer and account have been created, 11
+[ERROR] 2020-11-16 15:01:18.217 [main] LogThis - A new customer and account have been created, 11
+[ERROR] 2020-11-16 15:01:24.321 [main] LogThis - A new customer and account have been created, 11
+[ERROR] 2020-11-16 15:48:04.162 [main] LogThis - A new customer and account have been created, 11
+[ERROR] 2020-11-16 16:17:43.205 [main] LogThis - A new customer and account have been created, 22
+[ERROR] 2020-11-16 17:37:01.469 [main] LogThis -  A withdraw has occoured with the amount of 200.0 for 2
+[ERROR] 2020-11-16 17:37:34.722 [main] LogThis -  A customer has an updated username: 2 lovely
+[ERROR] 2020-11-16 17:38:22.194 [main] LogThis -  A customer has an updated username: 2 nice
+[ERROR] 2020-11-16 17:41:04.177 [main] LogThis -  A customer has an updated username: 2 lovely
+[ERROR] 2020-11-16 17:42:26.548 [main] LogThis -  A customer has an updated password: 2 nice
+[ERROR] 2020-11-16 18:18:38.769 [main] LogThis - A new customer and account have been created, 
+[ERROR] 2020-11-16 18:38:10.817 [main] LogThis - A new customer and account have been created, 
+[ERROR] 2020-11-16 20:50:40.565 [main] LogThis - A new customer and account have been created 
+[ERROR] 2020-11-16 20:51:01.617 [main] LogThis -  A customer has an updated username: lollipop
+[ERROR] 2020-11-16 21:26:41.263 [main] LogThis - A new customer and account have been created 
+[ERROR] 2020-11-16 21:42:55.159 [main] LogThis - A new customer and account have been created 
+[ERROR] 2020-11-16 21:43:18.506 [main] LogThis -  A deposit has been made 120.0 for 
+[ERROR] 2020-11-16 21:46:39.593 [main] LogThis -  A customer has an updated password: istheone
+[ERROR] 2020-11-16 21:46:48.119 [main] LogThis -  A customer has been removed: userone
+[ERROR] 2020-11-16 22:37:54.288 [main] LogThis -  A deposit has been made 80.0 for 
+[ERROR] 2020-11-16 22:39:55.915 [main] LogThis -  A deposit has been made 100.0 for 
+[ERROR] 2020-11-17 13:59:09.751 [main] LogThis -  A deposit has been made 120.0 for 
+[ERROR] 2020-11-17 14:02:31.556 [main] LogThis -  A deposit has been made 140.0 for 
+[ERROR] 2020-11-17 14:10:06.348 [main] LogThis -  A customer has been removed: sweetgirl
+[ERROR] 2020-11-17 14:10:06.953 [main] LogThis -  A deposit has been made 160.0 for 
+[ERROR] 2020-11-17 14:10:07.247 [main] LogThis - A new customer and account have been created 
+[ERROR] 2020-11-17 14:10:57.340 [main] LogThis -  A customer has been removed: major
+[ERROR] 2020-11-17 14:14:10.529 [main] LogThis -  A deposit has been made 80.0 for 
+[ERROR] 2020-11-17 14:15:18.807 [main] LogThis -  A customer has been removed: coolgirl
+[ERROR] 2020-11-17 14:15:19.474 [main] LogThis - A new customer and account have been created 
+[ERROR] 2020-11-17 14:16:02.236 [main] LogThis -  A deposit has been made 80.0 for 
+[ERROR] 2020-11-17 14:21:28.686 [main] LogThis - A new customer and account have been created 
+[ERROR] 2020-11-17 14:21:44.272 [main] LogThis -  A deposit has been made 560.0 for 
+[ERROR] 2020-11-17 14:22:30.661 [main] LogThis -  A withdraw has occoured with the amount of 490.0 for imcool
+[ERROR] 2020-11-17 14:23:17.196 [main] LogThis - A new customer and account have been created 
+[ERROR] 2020-11-17 14:23:27.401 [main] LogThis -  A customer has an updated username: justmake
+[ERROR] 2020-11-17 14:28:15.835 [main] LogThis -  A customer has an updated password: whatyouwant
+[ERROR] 2020-11-17 14:30:58.997 [main] LogThis -  A customer has an updated username: justmake
+[ERROR] 2020-11-17 14:40:17.989 [main] LogThis -  A customer has an updated password: guilds
+[ERROR] 2020-11-17 14:40:33.218 [main] LogThis -  A customer has been removed: imcool
+[ERROR] 2020-11-17 14:45:39.714 [main] LogThis -  A deposit has been made 100.0 for 
+[ERROR] 2020-11-17 14:45:40.635 [main] LogThis -  A customer has an updated password: cool
+[ERROR] 2020-11-17 14:45:57.635 [main] LogThis -  A deposit has been made 120.0 for 
+[ERROR] 2020-11-17 14:45:58.615 [main] LogThis -  A customer has an updated password: cool
+[ERROR] 2020-11-17 14:47:14.701 [main] LogThis - A new customer and account have been created 
+[ERROR] 2020-11-17 14:47:25.951 [main] LogThis -  A customer has an updated password: sweet2
+[ERROR] 2020-11-17 14:47:32.328 [main] LogThis -  A customer has been removed: cool2

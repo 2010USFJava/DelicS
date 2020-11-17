@@ -81,6 +81,8 @@ static Customer a = new Customer();
 		String loginPassword = scanner.next();
 		CustomerDao a2 = new CustomerDaoImpl();
 				if (a2.retrieveByUser(loginUsername) != null) {
+					Customer a = a2.retrieveByUser(loginUsername);
+					System.out.println(a.toString());
 					System.out.println("Select an option from the list below." +
 							"\n [1] Deposit" +
 							"\n [2] Withdraw" +
@@ -183,9 +185,13 @@ static Customer a = new Customer();
 				String user3 = scanner.next();
 				CustomerDao use3 = new CustomerDaoImpl();
 				Customer c5 = use3.retrieveByUser(user3);
-				use3.removeCustomer(c5, user3);
-				System.out.println("The customer has been removed.");
-				optionsA();
+				if (c5.getBalance() == 0) {
+					use3.removeCustomer(c5, user3);
+					System.out.println("The customer has been removed.");
+					optionsA();
+				}else {
+					System.out.println("The balance must be zero to remove a customer account.");				}
+					optionsA();
 				break;
 			case 5:
 				startMenu();

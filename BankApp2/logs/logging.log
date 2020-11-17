@@ -74,3 +74,7 @@
 [ERROR] 2020-11-17 14:47:14.701 [main] LogThis - A new customer and account have been created 
 [ERROR] 2020-11-17 14:47:25.951 [main] LogThis -  A customer has an updated password: sweet2
 [ERROR] 2020-11-17 14:47:32.328 [main] LogThis -  A customer has been removed: cool2
+[ERROR] 2020-11-17 16:56:18.465 [main] LogThis -  A withdraw has occoured with the amount of 10.0 for justcreate
+[ERROR] 2020-11-17 16:56:43.442 [main] LogThis - A new customer and account have been created 
+[ERROR] 2020-11-17 16:57:10.843 [main] LogThis -  A withdraw has occoured with the amount of 0.0 for makingnew
+[ERROR] 2020-11-17 16:58:17.821 [main] LogThis -  A customer has been removed: makingnew

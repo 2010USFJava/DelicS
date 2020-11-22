@@ -78,3 +78,67 @@
 [ERROR] 2020-11-17 16:56:43.442 [main] LogThis - A new customer and account have been created 
 [ERROR] 2020-11-17 16:57:10.843 [main] LogThis -  A withdraw has occoured with the amount of 0.0 for makingnew
 [ERROR] 2020-11-17 16:58:17.821 [main] LogThis -  A customer has been removed: makingnew
+[ERROR] 2020-11-17 20:09:12.669 [main] LogThis - A new customer and account have been created. username is: stanley password is: yelnats01
+[ERROR] 2020-11-17 20:09:42.538 [main] LogThis -  A deposit has been made 300.0 for stanley
+[ERROR] 2020-11-17 20:10:48.912 [main] LogThis -  A withdraw has occoured with the amount of 280.0 for stanley
+[ERROR] 2020-11-17 20:19:48.522 [main] LogThis - A new customer and account have been created. username is: hello1 password is: hello2
+[ERROR] 2020-11-17 20:25:06.963 [main] LogThis -  A deposit has been made 200.0 for hello1
+[ERROR] 2020-11-17 20:26:29.531 [main] LogThis - A new customer and account have been created. username is: another password is: customer
+[ERROR] 2020-11-17 20:26:54.903 [main] LogThis -  A customer has an updated password: hello
+[ERROR] 2020-11-17 20:27:23.058 [main] LogThis -  A customer has been removed: another
+[ERROR] 2020-11-17 20:29:35.865 [main] LogThis - A new customer and account have been created. username is: use1 password is: user1
+[ERROR] 2020-11-17 20:29:53.361 [main] LogThis -  A deposit has been made 550.0 for use1
+[ERROR] 2020-11-17 20:30:45.140 [main] LogThis -  A withdraw has occoured with the amount of 500.0 for use1
+[ERROR] 2020-11-17 20:31:28.788 [main] LogThis - A new customer and account have been created. username is: use2 password is: user2
+[ERROR] 2020-11-17 20:31:55.580 [main] LogThis -  A customer has an updated password: user
+[ERROR] 2020-11-17 20:39:32.489 [main] LogThis - A new customer and account have been created. username is: newuser password is: pass
+[ERROR] 2020-11-17 20:42:13.578 [main] LogThis -  A deposit has been made 200.0 for newuser
+[ERROR] 2020-11-17 20:42:36.957 [main] LogThis -  A withdraw has occoured with the amount of 180.0 for newuser
+[ERROR] 2020-11-17 20:43:28.342 [main] LogThis - A new customer and account have been created. username is: u1 password is: u2
+[ERROR] 2020-11-17 20:43:48.915 [main] LogThis -  A customer has an updated password: pass1
+[ERROR] 2020-11-17 20:44:30.533 [main] LogThis -  A customer has been removed: u1
+[ERROR] 2020-11-17 21:29:06.017 [main] LogThis - A new customer and account have been created. username is: h1 password is: h2
+[ERROR] 2020-11-17 21:32:05.634 [main] LogThis -  A deposit has been made 200.0 for h1
+[ERROR] 2020-11-17 21:32:55.647 [main] LogThis -  A withdraw has occoured with the amount of 192.0 for h1
+[ERROR] 2020-11-17 21:33:46.412 [main] LogThis - A new customer and account have been created. username is: h2 password is: h3
+[ERROR] 2020-11-17 21:34:02.612 [main] LogThis -  A customer has an updated password: h4
+[ERROR] 2020-11-17 21:34:36.640 [main] LogThis -  A customer has been removed: h2
+[ERROR] 2020-11-17 21:37:03.433 [main] LogThis - A new customer and account have been created. username is: u1 password is: p1
+[ERROR] 2020-11-17 21:37:19.965 [main] LogThis -  A deposit has been made 200.0 for u1
+[ERROR] 2020-11-18 00:11:48.975 [main] LogThis -  A deposit has been made 140.0 for coolgirl
+[ERROR] 2020-11-18 00:11:49.970 [main] LogThis -  A customer has an updated password: cool
+[ERROR] 2020-11-18 00:14:32.808 [main] LogThis - A new customer and account have been created. username is: user1 password is: pass
+[ERROR] 2020-11-18 00:14:51.663 [main] LogThis -  A deposit has been made 200.0 for user1
+[ERROR] 2020-11-18 00:15:28.828 [main] LogThis -  A withdraw has occoured with the amount of 100.0 for user1
+[ERROR] 2020-11-18 00:16:06.793 [main] LogThis - A new customer and account have been created. username is: user2 password is: pass
+[ERROR] 2020-11-18 00:16:22.479 [main] LogThis -  A customer has an updated password: pass2
+[ERROR] 2020-11-18 00:17:11.387 [main] LogThis -  A customer has been removed: use2
+[ERROR] 2020-11-18 00:20:03.062 [main] LogThis - A new customer and account have been created. username is: coolgirl password is: cool
+[ERROR] 2020-11-18 00:22:27.451 [main] LogThis - A new customer and account have been created. username is: u1 password is: p1
+[ERROR] 2020-11-18 00:23:22.532 [main] LogThis - A new customer and account have been created. username is: u2 password is: p2
+[ERROR] 2020-11-18 00:23:42.934 [main] LogThis -  A deposit has been made 200.0 for u2
+[ERROR] 2020-11-18 00:24:36.561 [main] LogThis -  A withdraw has occoured with the amount of 100.0 for u2
+[ERROR] 2020-11-18 00:25:12.767 [main] LogThis - A new customer and account have been created. username is: u3 password is: p3
+[ERROR] 2020-11-18 00:25:29.972 [main] LogThis -  A customer has an updated password: p0
+[ERROR] 2020-11-18 00:26:07.860 [main] LogThis -  A customer has been removed: u3
+[ERROR] 2020-11-18 09:46:23.463 [main] LogThis - A new customer and account have been created. username is: c password is: p
+[ERROR] 2020-11-18 09:46:40.987 [main] LogThis -  A deposit has been made 200.0 for c
+[ERROR] 2020-11-18 09:47:10.882 [main] LogThis -  A withdraw has occoured with the amount of 100.0 for c
+[ERROR] 2020-11-18 09:47:58.828 [main] LogThis - A new customer and account have been created. username is: c1 password is: c2
+[ERROR] 2020-11-18 09:48:16.105 [main] LogThis -  A customer has an updated password: pass
+[ERROR] 2020-11-18 09:48:34.939 [main] LogThis -  A customer has been removed: c1
+[ERROR] 2020-11-18 09:50:07.835 [main] LogThis -  A withdraw has occoured with the amount of 0.0 for c
+[ERROR] 2020-11-18 09:50:35.707 [main] LogThis -  A customer has been removed: c
+[ERROR] 2020-11-18 09:51:18.167 [main] LogThis - A new customer and account have been created. username is: c password is: p
+[ERROR] 2020-11-18 09:51:36.031 [main] LogThis -  A deposit has been made 200.0 for c
+[ERROR] 2020-11-18 09:52:00.692 [main] LogThis -  A withdraw has occoured with the amount of 100.0 for c
+[ERROR] 2020-11-18 09:52:42.713 [main] LogThis - A new customer and account have been created. username is: c1 password is: pass
+[ERROR] 2020-11-18 09:53:02.095 [main] LogThis -  A customer has an updated password: pass
+[ERROR] 2020-11-18 09:53:24.391 [main] LogThis -  A customer has been removed: c1
+[ERROR] 2020-11-18 09:54:26.682 [main] LogThis -  A withdraw has occoured with the amount of 0.0 for c
+[ERROR] 2020-11-18 09:54:49.861 [main] LogThis -  A customer has been removed: c
+[ERROR] 2020-11-18 13:06:19.770 [main] LogThis - A new customer and account have been created. username is: c1 password is: pw
+[ERROR] 2020-11-18 13:06:38.840 [main] LogThis -  A deposit has been made 200.0 for c1
+[ERROR] 2020-11-18 13:07:36.536 [main] LogThis - A new customer and account have been created. username is: c2 password is: pw1
+[ERROR] 2020-11-18 13:07:50.325 [main] LogThis -  A customer has an updated password: pass
+[ERROR] 2020-11-18 13:08:19.485 [main] LogThis -  A customer has been removed: c2

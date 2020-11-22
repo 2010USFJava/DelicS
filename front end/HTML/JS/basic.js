@@ -48,3 +48,20 @@ function Hunam(name, age){
 }
 
 //Maker function
+function makePerson(name, age){
+    var p={};
+    p.name=name;
+    p.age = age;
+    return p;
+}
+function makePerson2(name,age){
+    var p={
+        "name":name,
+        "age":age,
+    }
+    return p;
+}
+//Arrays
+var myArray= [10,20,30];
+myArray[9] = "footballbat";
+

@@ -32,4 +32,5 @@ window.onload= function(){
     console.log("in onload");
     document.getElementById("pokesubmit").addEventListener("click",getPokemon,false)
     //(type of event, the function you want to happen, the use capture if nested elements bubble or capture)
+    document.getElemn
 }
